@@ -3,7 +3,6 @@ var data;
 xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
         data = JSON.parse(xhttp.responseText);
-        (document.getElementById('condition')).src = "https:" + ((data["current"])["condition"])["icon"];
         (document.getElementById('condT')).innerHTML = ((data["current"])["condition"])["text"];
         (document.getElementById('temp')).innerHTML = (data["current"])["temp_c"];
         (document.getElementById('humi')).innerHTML = (data["current"])["humidity"];
@@ -11,6 +10,7 @@ xhttp.onreadystatechange = function () {
         (document.getElementById('p2')).innerHTML = "NO<sub>2</sub> -- " + ((data["current"])["air_quality"])["no2"];
         (document.getElementById('p3')).innerHTML = "O<sub>3</sub> -- " + ((data["current"])["air_quality"])["o3"];
         (document.getElementById('p4')).innerHTML = "SO<sub>2</sub> -- " + ((data["current"])["air_quality"])["so2"];
+        (document.getElementById('condition')).src = "https:" + ((data["current"])["condition"])["icon"];
 
         (document.getElementById('loco')).innerHTML = "Region :- " + ((data["location"])["region"]) + "<br>" + "Country :- " + ((data["location"])["country"]) + "<br>";
     }
