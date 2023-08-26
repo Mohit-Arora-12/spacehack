@@ -15,7 +15,7 @@ xhttp.onreadystatechange = function () {
         (document.getElementById('loco')).innerHTML = "Region :- " + ((data["location"])["region"]) + "<br>" + "Country :- " + ((data["location"])["country"]) + "<br>";
     }
 };
-xhttp.open("GET", "http://api.weatherapi.com/v1/current.json?key=9bcedf8669584244abb190325232508&q=28.54644781561475,77.1947327239178&aqi=yes", true);
+xhttp.open("GET", "https://api.weatherapi.com/v1/current.json?key=9bcedf8669584244abb190325232508&q=28.54644781561475,77.1947327239178&aqi=yes", true);
 xhttp.send();
 
 
